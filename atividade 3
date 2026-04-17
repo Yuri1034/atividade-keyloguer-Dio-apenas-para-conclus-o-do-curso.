@@ -1,0 +1,74 @@
+🛡️ Medidas de Prevenção e Defesa em Segurança da Informação
+📌 1. Antivírus
+
+O antivírus é a primeira linha de defesa contra softwares maliciosos (malware), como vírus, trojans, ransomware e spyware.
+
+🔍 Como funciona:
+Assinaturas: compara arquivos com banco de ameaças conhecidas
+Heurística: detecta comportamentos suspeitos
+Proteção em tempo real: monitora arquivos e processos continuamente
+✅ Boas práticas:
+Manter sempre atualizado
+Ativar proteção em tempo real
+Realizar varreduras periódicas
+Utilizar soluções confiáveis como Windows Defender ou Kaspersky
+⚠️ Limitações:
+Pode não detectar ameaças novas (zero-day)
+Dependência de atualizações frequentes
+🔥 2. Firewall
+
+O firewall controla o tráfego de rede, permitindo ou bloqueando conexões com base em regras de segurança.
+
+🔍 Tipos:
+Firewall de rede: protege toda a infraestrutura
+Firewall de host: atua diretamente no dispositivo
+🧠 Funções:
+Bloquear acessos não autorizados
+Filtrar portas e protocolos
+Monitorar tráfego suspeito
+✅ Boas práticas:
+Manter ativado sempre
+Configurar regras específicas (evitar “permitir tudo”)
+Usar soluções como Windows Firewall ou pfSense
+⚠️ Limitações:
+Não detecta malware dentro do tráfego permitido
+Requer configuração adequada
+🧪 3. Sandboxing
+
+Sandboxing isola aplicações para evitar que causem danos ao sistema principal.
+
+🔍 Como funciona:
+Executa arquivos em ambiente controlado
+Impede acesso direto ao sistema operacional
+Monitora comportamento do programa
+💡 Uso comum:
+Testar arquivos suspeitos
+Analisar malware
+Navegação segura
+🛠️ Ferramentas:
+Sandboxie
+Any.Run
+✅ Vantagens:
+Alta segurança para testes
+Evita infecção do sistema real
+⚠️ Limitações:
+Pode ser contornado por malwares avançados
+Consome recursos
+👤 4. Conscientização do Usuário (Fator Humano)
+
+O usuário é frequentemente o elo mais fraco da segurança.
+
+🚨 Principais riscos:
+Phishing (e-mails falsos)
+Downloads maliciosos
+Senhas fracas
+Engenharia social
+🎯 Medidas:
+Treinamento contínuo
+Simulações de phishing
+Políticas de segurança claras
+✅ Boas práticas:
+Não clicar em links suspeitos
+Verificar remetentes de e-mail
+Usar autenticação em dois fatores (2FA)
+Criar senhas fortes

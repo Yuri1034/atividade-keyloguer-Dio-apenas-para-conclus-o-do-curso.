@@ -1,0 +1,58 @@
+import os
+
+pasta = "arquivos_teste"
+os.makedirs(pasta, exist_ok=True)
+
+for i in range(5):
+    with open(f"{pasta}/arquivo_{i}.txt", "w") as f:
+        f.write(f"Este é o arquivo de teste número {i}.\n")
+
+print("Arquivos de teste criados!")
+
+import os
+from cryptography.fernet import Fernet
+
+# Gerar chave
+chave = Fernet.generate_key()
+
+# Salvar chave
+with open("chave.key", "wb") as key_file:
+    key_file.write(chave)
+
+fernet = Fernet(chave)
+
+pasta = "arquivos_teste"
+
+for arquivo in os.listdir(pasta):
+    caminho = os.path.join(pasta, arquivo)
+
+    with open(caminho, "rb") as f:
+        dados = f.read()
+
+    dados_criptografados = fernet.encrypt(dados)
+
+    with open(caminho, "wb") as f:
+        f.write(dados_criptografados)
+print("Arquivos criptografados!")
+from cryptography.fernet import Fernet
+
+# Carregar chave
+with open("chave.key", "rb") as key_file:
+    chave = key_file.read()
+
+fernet = Fernet(chave)
+
+pasta = "arquivos_teste"
+
+for arquivo in os.listdir(pasta):
+    caminho = os.path.join(pasta, arquivo)
+
+    with open(caminho, "rb") as f:
+        dados = f.read()
+
+    dados_descriptografados = fernet.decrypt(dados)
+
+    with open(caminho, "wb") as f:
+        f.write(dados_descriptografados)
+
+print("Arquivos restaurados!")
